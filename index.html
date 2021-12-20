@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <img v-if="loading" src="./Spinner-3.gif">
+       <div v-else>
+        <img :class="gender" :src="photo" :alt="name">
+        <h1>{{fname}} {{lname}}</h1>
+        <h3>{{email}}</h3>
+        <button @click="getUser" :class="gender">Get Random User</button>
+       </div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>
